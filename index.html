@@ -1,78 +1,31 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>你会用吗</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
+      content="initial-scale=1,user-scalable=no,width=device-width,viewport-fit=cover"
     />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>编辑器</title>
+    <link rel="stylesheet" href="../demo-6.7.0/iconfont.css" />
+    <link rel="stylesheet" href="../demo-6.7.0/animate.min.css" />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/amis/sdk/sdk.css"
+      data-react-helmet="true"
+      rel="shortcut icon"
+      href="../demo-6.7.0/78204817.png?s=200&v=4"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/amis/sdk/helper.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/amis/sdk/iconfont.css"
-    />
-    <!-- 这是默认主题所需的，如果是其他主题则不需要 -->
-    <!-- 从 1.1.0 开始 sdk.css 将不支持 IE 11，如果要支持 IE11 请引用这个 css，并把前面那个删了 -->
-    <!-- <link rel="stylesheet" href="sdk-ie11.css" /> -->
-    <!-- 不过 amis 开发团队几乎没测试过 IE 11 下的效果，所以可能有细节功能用不了，如果发现请报 issue -->
-    <style>
-      html,
-      body,
-      .app-wrapper {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+    <link href="../demo-6.7.0/css/vendor.7e7c5fae.css" rel="stylesheet" />
+    <link href="../demo-6.7.0/css/index.b5761050.css" rel="stylesheet" />
   </head>
   <body>
-    <div id="root" class="app-wrapper"></div>
-    <script src="https://cdn.jsdelivr.net/npm/amis/sdk/sdk.js"></script>
-    <script type="text/javascript">
-      (function () {
-        let amis = amisRequire("amis/embed");
-        // 通过替换下面这个配置来生成不同页面
-        let amisJSON = {
-          type: "page",
-          title: "",
-          body: [
-            {
-              type: "card",
-
-              header: {
-                title: "",
-
-                avatarText: "ios",
-              },
-              body: "Shadowrocket是一个用于iOS系统的收费代理软件，（美国区售价为2.99美金）",
-            },
-            {
-              type: "card",
-
-              header: {
-                title: "",
-
-                avatarText: "mac",
-              },
-              body: "https://github.com/MetaCubeX/ClashX.Meta/releases勾选设置系统网络代理",
-            },
-          ],
-        };
-        let amisScoped = amis.embed("#root", amisJSON);
-      })();
-    </script>
+    <div id="root"></div>
+    <script defer src="../demo-6.7.0/scripts/chunk/vendor.19148c9b.js"></script>
+    <script defer src="../demo-6.7.0/scripts/chunk/index.4150717e.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
+    <script src="../index.js"></script>
+    <script src="../axios.min.js"></script>
   </body>
 </html>
