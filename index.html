@@ -8,23 +8,13 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/amis/sdk/sdk.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/amis/sdk/helper.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/amis/sdk/iconfont.css"
-    />
+    <link rel="stylesheet" href="./amis6.10.0sdk/sdk.css" />
+    <link rel="stylesheet" href="./amis6.10.0sdk/helper.css" />
+    <link rel="stylesheet" href="./amis6.10.0sdk/iconfont.css" />
     <!-- 这是默认主题所需的，如果是其他主题则不需要 -->
     <!-- 从 1.1.0 开始 sdk.css 将不支持 IE 11，如果要支持 IE11 请引用这个 css，并把前面那个删了 -->
     <!-- <link rel="stylesheet" href="sdk-ie11.css" /> -->
-    <!-- 不过 amis 开发团队几乎没测试过 IE 11 下的效果，所以可能有细节功能用不了，如果发现请报 issue -->
+    <!-- 不过 amis 开发团队几乎11没测试过 IE 11 下的效果，所以可能有细节功能用不了，如果发现请报 issue -->
     <style>
       html,
       body,
@@ -39,7 +29,11 @@
   </head>
   <body>
     <div id="root" class="app-wrapper"></div>
-    <script src="https://cdn.jsdelivr.net/npm/amis/sdk/sdk.js"></script>
+
+    <script src="./axios.min.js"></script>
+    <script src="./index.js"></script>
+    <script src="./amis6.10.0sdk/sdk.js"></script>
+
     <script type="text/javascript">
       (function () {
         let amis = amisRequire("amis/embed");
@@ -60,7 +54,7 @@
                 "description": "<br/><b>崇仁中西医结合医院是崇仁县医保、工伤保险定点医疗机构</b>",
                 "avatarClassName": "pull-left thumb-md avatar b-3x m-r",
                 "desc": "",
-                "avatarText": "图片"
+                "avatar": "./yiyuan.jpg"
               },
               "body": [
                 {
@@ -326,7 +320,44 @@
             "body"
           ],
           "data": {
+
+            "image": "./zhm.png",
             "items": [
+              {
+                "icon": "https://aisuda-public-images.bj.bcebos.com/amis/icon-3.png",
+                "text": "名医坐诊",
+
+                "clickAction": {
+                  "actionType": "dialog",
+
+                  "dialog": {
+                    "title": {
+                      "type":"tpl",
+                      "tpl":"<h3>专家介绍</h3>"
+                    },
+                    "actions":[],
+                    "body": [
+                      {
+                        "type": "static-image",
+                        "imageMode": "original",
+                        "src": "./zxj.png",
+                        "label": "",
+                        "thumbMode": "cover"
+                      },
+                      {
+                        "type":"tpl",
+                        "tpl":"<section data-role=\"paragraph\" data-width=\"95%\" style=\"width: 95%;flex: 0 0 95%;border-style: dashed;border-width: 1px;border-color: rgb(221, 221, 221);border-radius: 0px;margin-right: auto;margin-left: auto;padding-top: 10px;padding-right: 10px;padding-bottom: 10px;max-width: 95% !important;\" draggable=\"true\"><section data-tools=\"135编辑器\" data-id=\"107072\" data-width=\"100%\" style=\"width: 100%;flex: 0 0 100%;margin-left: auto;margin-right: auto;\"><section style=\"margin: 10px auto;text-align: center;\"><section style=\"padding-right: 10px;padding-left: 10px;\"><section style=\"display: flex;justify-content: space-between;align-items: center;\"><section style=\"width: 50%;max-width: 50% !important;\" data-width=\"50%\"><section style=\"text-align: left;\"><section style=\"display:inline-block;\"><section style=\"font-size: 16px;letter-spacing: 1.5px;color: rgb(138, 110, 107);padding-right: 5px;padding-left: 5px;\"><span style=\"color:#757576;\"><strong data-brushtype=\"text\">周小江</strong></span></section><section style=\"width: 100%;height: 7px;background-color: rgb(255, 231, 229);margin-top: -5px;overflow: hidden;\" data-width=\"100%\"><br></section></section></section><section data-autoskip=\"1\" style=\"padding-top: 10px;text-align: justify;line-height: 1.75em;letter-spacing: 1.5px;font-size: 14px;color: rgb(138, 110, 107);background-image: initial;background-position: initial;background-size: initial;background-repeat: initial;background-attachment: initial;background-origin: initial;background-clip: initial;\"><ul class=\"list-paddingleft-1\" style=\"list-style-position: outside;padding-left: 30px;\"><li><p style=\"text-align:justify;line-height: 1.75em;\"><span style=\"font-size: 12px;line-height: 2em;color: rgb(117, 117, 118);\">南大一附院消化内科副主任</span></p></li><li><p style=\"text-align:justify;line-height: 1.75em;\"><span style=\"font-size: 12px;line-height: 2em;color: rgb(117, 117, 118);\">主任医师</span></p></li><li><p style=\"text-align:justify;line-height: 1.75em;\"><span style=\"font-size: 12px;line-height: 2em;color: rgb(117, 117, 118);\">副教授</span></p></li><li><p style=\"text-align:justify;line-height: 1.75em;\"><span style=\"font-size: 12px;line-height: 2em;color: rgb(117, 117, 118);\">博士生导师</span></p></li><li><p style=\"text-align:justify;line-height: 1.75em;\"><span style=\"font-size: 12px;line-height: 2em;color: rgb(117, 117, 118);\">中国医师协会培训学院导师</span></p></li><li><p style=\"text-align:justify;line-height: 1.75em;\"><span style=\"font-size: 12px;line-height: 2em;color: rgb(117, 117, 118);\">中国医师协会胰腺病专科医师</span></p></li></ul></section></section><section style=\"width: 40%;max-width: 40% !important;\" data-width=\"40%\"><section style=\"width: 100%;\" data-width=\"100%\"><section data-tools=\"135编辑器\" data-id=\"126156\"><section style=\"margin: 10px auto;\"><section style=\"width: 100%;\" data-width=\"100%\"></section></section></section></section></section></section></section></section></section><p style=\"text-align:justify;margin-left: 10px;\"><span style=\"font-size: 12px;caret-color: rgb(255, 0, 0);color: rgb(117, 117, 118);font-family: 微软雅黑, sans-serif;\">擅长消化科疑难病、危重病的诊治，消化内镜的各项操作（如ERCP、ESD、POEM、STER、超声胃镜、胃肠道支架置入、胃肠息肉内镜下切除等），尤其擅长胆胰疾病、消化道早癌及粘膜下病变剥离术等内镜操作。</span></p></section>"
+                      }
+                    ]
+                  }
+                }
+              },
+
+              {
+                "icon": "https://aisuda-public-images.bj.bcebos.com/amis/icon-2.png",
+                "text": "地图导航"
+
+              },
               {
                 "icon": "https://aisuda-public-images.bj.bcebos.com/amis/icon-1.png",
                 "text": "人才招聘",
@@ -334,24 +365,21 @@
                 "blank": true
               },
               {
-                "icon": "https://aisuda-public-images.bj.bcebos.com/amis/icon-2.png",
-                "text": "地图导航",
+                "icon": "https://aisuda-public-images.bj.bcebos.com/amis/icon-4.png",
+                "text": "联系我们",
                 "clickAction": {
                   "actionType": "dialog",
                   "dialog": {
                     "title": "弹框",
-                    "body": "这是个简单的弹框。"
+                    "body": {
+                      "type": "static-image",
+                      "imageMode": "original",
+                      "name": "image",
+                      "label": "",
+                      "thumbMode": "cover"
+                    }
                   }
                 }
-              },
-              {
-                "icon": "https://aisuda-public-images.bj.bcebos.com/amis/icon-3.png",
-                "text": "公告动态",
-                "link": "/docs/index"
-              },
-              {
-                "icon": "https://aisuda-public-images.bj.bcebos.com/amis/icon-4.png",
-                "text": "联系我们"
               }
             ]
           }
@@ -362,8 +390,8 @@
           {}, //这个空对象可以放固定数据如 data:{imgIp:""}
           {
             fetcher: function (config) {
-            /*   let result = axios_http2(config);
-              return result; */
+              let result = axios_http2(config);
+              return result;
             },
           }
         );
