@@ -362,7 +362,38 @@
               {
                 "icon": "https://aisuda-public-images.bj.bcebos.com/amis/icon-2.png",
                 "text": "地图导航"
+"clickAction": {
+                  "actionType": "dialog",
 
+                  "dialog": {
+                    "title": {
+                      "type":"tpl",
+                      "tpl":"<h3>百度地图</h3>"
+                    },
+                    "actions":[],
+                    "body": [
+                     {
+    "type": "location-picker",
+    "name": "location",
+    "ak": "LiZT5dVbGTsPI91tFGcOlSpe5FDehpf7",
+    "label": "需要百度地图软件打开",
+    "value": {
+      "address": "江西省抚州市崇仁县崇仁中西医结合医院",
+      "lat": 27.775455560743872,
+      "lng": 116.10130695768358,
+      "city": "抚州市",
+      "vendor": "baidu"
+    },
+    "static": true,
+    "staticSchema": {
+      "embed": true,
+      "showAddress": true
+    }
+  }
+                      
+                    ]
+                  }
+                }
               },
               {
                 "icon": "https://aisuda-public-images.bj.bcebos.com/amis/icon-1.png",
