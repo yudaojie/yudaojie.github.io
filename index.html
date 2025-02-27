@@ -2,19 +2,29 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8" />
-    <title>自定义amis</title>
+    <title>崇仁中西医结合医院</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
-    <link rel="stylesheet" href=./sdk.css" />
-    <link rel="stylesheet" href="./helper.css" />
-    <link rel="stylesheet" href="./iconfont.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/amis/sdk/sdk.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/amis/sdk/helper.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/amis/sdk/iconfont.css"
+    />
     <!-- 这是默认主题所需的，如果是其他主题则不需要 -->
     <!-- 从 1.1.0 开始 sdk.css 将不支持 IE 11，如果要支持 IE11 请引用这个 css，并把前面那个删了 -->
     <!-- <link rel="stylesheet" href="sdk-ie11.css" /> -->
-    <!-- 不过 amis 开发团队几乎11没测试过 IE 11 下的效果，所以可能有细节功能用不了，如果发现请报 issue -->
+    <!-- 不过 amis 开发团队几乎没测试过 IE 11 下的效果，所以可能有细节功能用不了，如果发现请报 issue -->
     <style>
       html,
       body,
@@ -29,11 +39,7 @@
   </head>
   <body>
     <div id="root" class="app-wrapper"></div>
-
-   <!--  <script src="./axios.min.js"></script> -->
- <!--    <script src="./index.js"></script> -->
-    <script src="./sdk.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/amis/sdk/sdk.js"></script>
     <script type="text/javascript">
       (function () {
         let amis = amisRequire("amis/embed");
