@@ -48,7 +48,81 @@
     let amisJSON = {
       "type": "page",
       "title": "Hello world",
-      "body":  ""
+      "body":  "package com.google.demoForIdea.controller;
+
+
+import com.google.demoForIdea.dao.SqlDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import java.util.HashMap;
+import java.util.Map;
+@RestController
+@RequestMapping(value = user)
+public class SqlController {
+    @Autowired
+    private SqlDao sqlDao;
+
+
+
+    @GetMapping(getSql)
+    public Map getsql() {
+            Map<String, Object> resultMap = new HashMap<>();
+            resultMap.put(status,0);
+            resultMap.put(msg,查询成功);
+            resultMap.put(rows,sqlDao.getSql());
+            return resultMap;
+    }
+
+
+    @PostMapping(addSql)
+    public Map addsql(@RequestBody Map<String, Object> map) {
+        Map<String, Object> resultMap = new HashMap<>();
+        try {
+             sqlDao.addSql(map);
+            resultMap.put(status,0);
+            resultMap.put(msg,新增成功);
+        }catch (Exception e){
+            e.printStackTrace();
+            resultMap.put(status,1);
+            resultMap.put(msg,新增失败);
+        }
+        return resultMap;
+    }
+    @PostMapping(updateSql)
+    public Map updateSql(@RequestBody Map<String, Object> map) {
+        Map<String, Object> resultMap = new HashMap<>();
+        try {
+            sqlDao.updateSql(map);
+            resultMap.put(status,0);
+            resultMap.put(msg,修改成功);
+        }catch (Exception e){
+            e.printStackTrace();
+            resultMap.put("status",1);
+
+            resultMap.put(msg,修改失败);
+        }
+        return resultMap;
+    }
+    @PostMapping(deleteSql)
+    public Map deleteSql(@RequestBody Map<String, Object> map) {
+        Map<String, Object> resultMap = new HashMap<>();
+        try {
+            sqlDao.deletSql(map);
+            resultMap.put(status,0);
+            resultMap.put(msg,删除成功);
+        }catch (Exception e){
+            e.printStackTrace();
+            resultMap.put(status,1);
+            resultMap.put(msg,删除失败);
+        }
+
+        return resultMap;
+    }
+
+
+
+}
+"
       }
     };
     let amisScoped = amis.embed(
@@ -66,4 +140,5 @@
 </script>
 </body>
 </html>
+
 
